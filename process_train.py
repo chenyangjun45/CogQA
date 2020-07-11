@@ -93,7 +93,7 @@ for bundle in tqdm(test):
                 pool.add(title)
             r = fuzzy_find(pool, find_fact_content(bundle, title, sen_num))
             fact.append(r)
-        except IndexError as e: 
+        except IndexError as e:
             print(bundle['_id'])
 with open('./hotpot_train_v1.1_refined.json', 'w') as fout:
     json.dump(test, fout)

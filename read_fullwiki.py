@@ -36,4 +36,4 @@ for filename in tqdm(files):
                             name = 'edges:###'+ str(i) + '###' + page['title']
                             db.delete(name)
                             db.rpush(name, *t)
-                        
+

@@ -111,7 +111,7 @@ def convert_question_to_samples_bundle(tokenizer, data: 'Json refined', neg = 2)
     '''
 
     context = dict(data['context']) # all the entities in 10 paragraphs
-    gold_sentences_set = dict([((para, sen), edges) for para, sen, edges in data['supporting_facts']]) 
+    gold_sentences_set = dict([((para, sen), edges) for para, sen, edges in data['supporting_facts']])
     e2i, i2e = {}, [] # entity2index, index2entity
     for entity, sens in context.items():
         e2i[entity] = len(i2e)
